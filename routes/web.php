@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Dashboard\IndexController;
+use App\Http\Controllers\Dashboard\MoviesController;
+use App\Livewire\Dashboard\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard.index');
 });
+
+Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::get('/filmes', [MoviesController::class, 'index'])->name('movies');
+Route::get('/login', Index::class)->name('login');
