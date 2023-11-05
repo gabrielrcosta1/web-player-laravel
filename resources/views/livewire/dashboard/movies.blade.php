@@ -24,7 +24,7 @@
             @endphp
             <nav class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
                 @foreach ($movies as $movie)
-                    <a href="javascript:void(0)"
+                    <a href="{{ route('movies.play', ['id' => $movie->stream_id]) }}" wire:navigate
                         class="aspect-w-16 aspect-h-9 group relative overflow-hidden rounded-2xl bg-black/25 transition hover:ring-4 hover:ring-indigo-500/50 active:opacity-75 active:ring-indigo-500/25">
                         <img class="object-cover" src="{{ $movie->stream_icon }}" />
                         <div
@@ -38,6 +38,7 @@
                                         <p class="text-sm font-semibold text-slate-500">
                                             {{ $movie->year }}
                                         </p>
+
                                     </div>
                                     <div
                                         class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-500/25 text-slate-400 transition-all group-hover:scale-110 group-hover:bg-indigo-500 group-hover:text-white group-active:scale-100">

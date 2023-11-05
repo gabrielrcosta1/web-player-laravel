@@ -13,7 +13,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
     <style>
         [x-cloak] {
             display: none;
@@ -42,6 +42,7 @@
     </div>
 
     @livewireScripts
+    <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
 </body>
 
 </html>

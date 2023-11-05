@@ -18,8 +18,6 @@ class Movies extends Component
 
 
 
-
-
     public function render()
     {
 

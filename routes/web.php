@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Dashboard\IndexController;
 use App\Http\Controllers\Dashboard\MoviesController;
+use App\Http\Controllers\Dashboard\PlayMovieController;
 use App\Livewire\Dashboard\Index;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Route::get('/', function () {
 Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::get('/filmes', [MoviesController::class, 'index'])->name('movies');
 Route::get('/login', Index::class)->name('login');
+
+Route::get('/filmes/assistir/{id}', [PlayMovieController::class, 'index'])->name('movies.play');
