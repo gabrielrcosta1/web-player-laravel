@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Dashboard;
 
+use App\Models\Category;
 use App\Models\Channel;
 use App\Models\Movie;
 use App\Models\Serie;
@@ -15,8 +16,19 @@ class Movies extends Component
 {
     use Interactions;
 
+
+
+
+
     public function render()
     {
-        return view('livewire.dashboard.movies');
+
+        $categories = Category::all();
+
+        foreach ($categories as $category) {
+            $movies = Movie::where('category_id', $category->category_id)->paginate(3);
+        }
+
+        return view('livewire.dashboard.movies', compact('categories'));
     }
 }

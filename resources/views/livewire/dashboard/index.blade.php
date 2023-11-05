@@ -18,7 +18,7 @@
         </div>
         <nav class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
             <!-- Movie -->
-            @foreach ($results as $result)
+            @foreach ($movies as $result)
                 <a href="javascript:void(0)"
                     class="aspect-w-16 aspect-h-10 group relative overflow-hidden rounded-2xl bg-black/25 transition hover:ring-4 hover:ring-indigo-500/50 active:opacity-75 active:ring-indigo-500/25">
                     <img class="object-cover" src="{{ $result['stream_icon'] }}" />
