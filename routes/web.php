@@ -25,4 +25,4 @@ Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::get('/filmes', [MoviesController::class, 'index'])->name('movies');
 Route::get('/login', Index::class)->name('login');
 
-Route::get('/filmes/assistir/{id}', [PlayMovieController::class, 'index'])->name('movies.play');
+Route::get('/filmes/assistir/{id}', [PlayMovieController::class, 'index'])->name('movies.play')->middleware('check.movie.id');
